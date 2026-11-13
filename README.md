@@ -1,24 +1,32 @@
-<img width="100%" src="assets/boot.svg" alt="HAO/527 · Quality engineering, AI developer tools, and projects from software to hardware">
+# Hao
 
-[代表项目](#代表项目) · [技术栈](#技术栈) · [贡献雷达](#贡献雷达) · [全部仓库](https://github.com/hao-527?tab=repositories)
+我做软件质量工具、macOS 原生应用，也把一些日常需求做成小程序和硬件原型。
 
-喜欢把反复踩的坑整理成可检索的案例，把反复做的事做成工具。这里放着我的质量工程工具、macOS 小应用、微信小程序和硬件原型。
+[代表项目](#代表项目)　·　[其他作品](#其他作品)　·　[全部仓库 ↗](https://github.com/hao-527?tab=repositories)
+
+---
 
 ## 代表项目
 
-- **[BugHub](https://github.com/hao-527/BugHub)** · 按失效机制整理软件 Bug，通过 MCP 让 AI 在写代码或测试用例前检索相似案例。[访问网站 ↗](https://bughub.vip)
-- **[agent-activity](https://github.com/hao-527/agent-activity)** · 在 macOS 菜单栏看 Claude Code、Codex 和 DeepSeek Harness 的活动，也给 Kiro 做了像素桌宠。
-- **[生活有本谱](https://github.com/hao-527/youbenpu)** · 用一个微信小程序管理家庭账本、点餐和物品库存，后端用 Go 和 MySQL。
-- **[PawTrack](https://github.com/hao-527/pawtrack)** · 原型 · 从 4G/GNSS 项圈到微信地图的宠物定位系统，包含固件、定位服务、小程序和 PCB 设计。
+### BugHub · 软件失效案例库
 
-**更多工具** · [MacTranslator（划词翻译）](https://github.com/hao-527/MacTranslator) · [Code-Template（工程模板）](https://github.com/hao-527/Code-Template) · [MapTrace（城市旧照片）](https://github.com/hao-527/MapTrace)
+把软件故障拆成可检索的案例，按失效机制归档，每条案例都有稳定编号，记录现象、成因和测试要点。开发和测试可以在网站上查阅，编码助手可以通过 MCP 检索。
 
-## 技术栈
+[<img src="assets/bughub.webp" width="100%" alt="BugHub 线上首页，展示业务规则、输入校验、并发与执行顺序等失效分类">](https://bughub.vip)
 
-![技术栈。前端：TypeScript、React、Next.js、Taro。服务端：Go、Python、Java、MySQL。原生与硬件：Swift、AppKit、ESP-IDF、KiCad。工具与集成：MCP、Docker、GitHub Actions。](assets/stack.svg)
+[访问 BugHub ↗](https://bughub.vip)　·　[源码](https://github.com/hao-527/BugHub)　·　[MCP 接入](https://github.com/hao-527/BugHub/tree/main/bughub-mcp)
 
-## 贡献雷达
+### PawTrack · 4G 宠物定位器原型
 
-![过去一年的 GitHub 公开可见贡献。上方柱形按周汇总，下方热图按天显示。](assets/activity.svg)
+为宠物项圈做一套独立联网的定位系统。固件采集 GNSS 坐标，经 4G 上传到 FastAPI 服务，微信小程序显示当前位置和历史轨迹。已完成四层 PCB 和外壳设计，实体样机待验证。
 
-每周更新 · [查看生成脚本](scripts/refresh.py) · [查看更新记录](https://github.com/hao-527/hao-527/actions/workflows/profile.yml)
+[<img src="assets/pawtrack.webp" width="100%" alt="PawTrack EVT-A1 工程图，左侧是外壳 CAD 爆炸图，右侧是 PCB 顶层布线">](https://github.com/hao-527/pawtrack/tree/main/hardware/custom/evt-a1)
+
+[源码](https://github.com/hao-527/pawtrack)　·　[EVT-A1 硬件设计](https://github.com/hao-527/pawtrack/tree/main/hardware/custom/evt-a1)
+
+## 其他作品
+
+- **[agent-activity](https://github.com/hao-527/agent-activity)** · 用 Swift / AppKit 在 macOS 菜单栏显示 Claude Code、Codex 和 DeepSeek Harness 的本地会话状态。Kiro 版用 Python 做成桌面像素宠物。
+- **[生活有本谱](https://github.com/hao-527/youbenpu)** · 把家庭账本、点餐和库存放进同一个微信小程序。前端用 Taro / React，API 用 Go / MySQL。
+- **[MacTranslator](https://github.com/hao-527/MacTranslator)** · 用 Swift 和系统翻译框架做的划词翻译工具，按 <kbd>⌥</kbd> <kbd>D</kbd> 在光标附近查看译文。
+- **[Code-Template](https://github.com/hao-527/Code-Template)** · 为 AI 辅助开发准备的前后端工程模板，包含 Spring Boot 单体与微服务骨架。
